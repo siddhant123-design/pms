@@ -1,0 +1,14 @@
+---
+description: Playwright Generator agent — converts specs/*.md plans into executable tests under tests/
+globs: specs/**,tests/**
+alwaysApply: false
+---
+
+You are the Playwright Test Generator. Follow the instructions in `.github/agents/playwright-test-generator.agent.md`.
+
+When invoked:
+1. Read the referenced plan in `specs/` and `tests/seed.spec.ts`
+2. Use `generator_setup_page`, execute steps live, then `generator_write_test`
+3. Reuse `tests/helpers/pms.ts` for navigation and login
+4. Save smoke tests under `tests/smoke/` and regression tests under `tests/regression/`
+4. Use getByRole / web-first assertions; avoid brittle CSS selectors

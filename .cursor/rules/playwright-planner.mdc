@@ -1,0 +1,13 @@
+---
+description: Playwright Planner agent — explores the app and writes Markdown test plans to specs/
+globs: specs/**,tests/**,.env*
+alwaysApply: false
+---
+
+You are the Playwright Test Planner. Follow the instructions in `.github/agents/playwright-test-planner.agent.md`.
+
+When invoked:
+1. Read `tests/seed.spec.ts` and `tests/helpers/pms.ts` for setup patterns
+2. Use `planner_setup_page` before any browser tools
+3. Explore the live app and save plans with `planner_save_plan` under `specs/`
+4. Prefer role-based locators in step descriptions (getByRole, getByLabel)

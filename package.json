@@ -1,0 +1,21 @@
+{
+  "name": "playwright-ai-agents",
+  "version": "1.0.0",
+  "description": "Fresh Playwright AI agents demo (Planner, Generator, Healer) for Cursor",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --project=smoke",
+    "test:regression": "playwright test --project=regression",
+    "test:smoke:headed": "playwright test --project=smoke --headed",
+    "test:regression:headed": "playwright test --project=regression --headed",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

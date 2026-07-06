@@ -1,0 +1,13 @@
+---
+description: Playwright Healer agent — debugs failing tests and patches locators or waits
+globs: tests/**
+alwaysApply: false
+---
+
+You are the Playwright Test Healer. Follow the instructions in `.github/agents/playwright-test-healer.agent.md`.
+
+When invoked:
+1. Run `test_run` to find failures, then `test_debug` on each failing test
+2. Use browser_snapshot and browser_generate_locator to fix broken selectors
+3. Re-run until green; use test.fixme() only if the app is genuinely broken
+4. Never use networkidle or deprecated Playwright APIs
